@@ -10,13 +10,15 @@ let person2 = person;
 
 person.firstName = 'Arya';
 
-console.log(person2.firstName); // output
-console.log(person.firstName); // output
-console.log(person.lastName); // output
-console.log(person == person2); // output
-console.log(person === person2); // output
-console.log(person.lastName === person2.lastName); // output
-```
+console.log(person2.firstName); // Arya Because the array have same memory location
+console.log(person.firstName); // Arya Because the array have same memory location
+console.log(person.lastName); // Doe Because the array have same memory location
+console.log(person == person2); // true Because the array have same memory location
+console.log(person === person2); // true Because the array have same memory location
+console.log(person.lastName === person2.lastName); // true Because the array have same memory location
+// 
+``` 
+
 
 2. Write the output with reason:
 
@@ -37,17 +39,17 @@ let personTwo = { ...person };
 person.firstName = 'Arya';
 person.city = 'Navada';
 
-console.log(personTwo.firstName); // output
-console.log(person.firstName); // output
-console.log(personTwo.lastName); // output
-console.log(person.firstName === personTwo.firstName); // output
-console.log(person == personTwo); // output
-console.log(person === personTwo); // output
-console.log(person.address === personTwo.address); // output
-console.log(person.address == personTwo.address); // output
-console.log(personTwo.address.city); // output
-console.log(person.address.city); // output
-console.log(person.address.city == personTwo.address.city); // output
+console.log(personTwo.firstName);  // John - as the object has been cloned it has a different memory location
+console.log(person.firstName); // Arya - as the object has been cloned it has a different memory location
+console.log(personTwo.lastName); // Doe - as the object has been cloned it has a different memory location
+console.log(person.firstName === personTwo.firstName); // false -  - as the object has been cloned it has a different memory location
+console.log(person == personTwo); // false
+console.log(person === personTwo); // false
+console.log(person.address === personTwo.address); // true - as the object has been cloned it has a different memory location but it contains shallow cloning where address is not been clones
+console.log(person.address == personTwo.address); // true
+console.log(personTwo.address.city); // Navada
+console.log(person.address.city); // Navada
+console.log(person.address.city == personTwo.address.city); // true
 ```
 
 3. Write the output with reason:
@@ -102,7 +104,8 @@ let blogs = [
     body: 'My third blog post',
   },
 ];
-
+let clonedBlogs={...blogs}
+console.log(clonedBlogs);
 // Your code goes here
 ```
 
@@ -127,7 +130,7 @@ var questions = [
     ],
   },
 ];
-
+let questionClone={...questions}
 // Your code goes here
 ```
 
@@ -154,7 +157,7 @@ var allBlogs = {
     },
   ],
 };
-
+let allBlogsClone={...allBlogs}
 // Your code goes here
 ```
 
@@ -187,15 +190,16 @@ let person = [
     },
   },
 ];
-
+let clonedPerson={...person}
 // Your code goes here
 ```
 
 8. Write a function named `cloneObject` that accepts an object and returns the clone of the object
 
 ```js
-function cloneObject() {
+function cloneObject(obj) {
   // your code
+  return JSON.parse(JSON.stringify(person));
 }
 
 // Run the test below to check your function
