@@ -19,7 +19,7 @@ To add this image here use ![name](./hello.jpg)
 2. Answer the following with reason:
 
 - `user == newUser;`
-  <!-- //output True -->
+  <!-- output True -->
   <!-- we assign the the value of user in newUser
   so the value of user and newUser Is same.
 
