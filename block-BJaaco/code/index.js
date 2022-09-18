@@ -84,10 +84,8 @@ console.log(times(5)); // ['test', 'test', 'test', 'test', 'test']
 /*
 
  5. Write a function named revert which reverts the element of the input array. 
-
   @param arr (array)
   @return array
-
   Example: 
     revert([1, 2, 3, 4]); // [4, 3, 2, 1]
     revert(['a', 'd', 'c', 'b']); // ['b', 'c', 'd', 'a']
