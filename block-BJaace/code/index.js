@@ -2,6 +2,7 @@
 let emptyArray = [];
 // 2. Now check the type of empty array you declared above.
 typeof emptyArray;
+// object
 // 3. Create an array named `colors` that contains five different names of colors as strings.
 let colors = ["red", "blue", "black", "yellow", "orange"];
 // 4. Access the first color in the array and print it to the console using `console.log()`
