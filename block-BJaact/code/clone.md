@@ -157,6 +157,7 @@ var allBlogs = {
     },
   ],
 };
+
 let allBlogsClone={...allBlogs}
 // Your code goes here
 ```
@@ -198,8 +199,10 @@ let clonedPerson={...person}
 
 ```js
 function cloneObject(obj) {
-  // your code
+  //your code
+
   return JSON.parse(JSON.stringify(person));
+
 }
 
 // Run the test below to check your function
@@ -209,6 +212,7 @@ let user = {
   house: 'Stark',
   sisters: ['Arya', 'Sansa'],
 };
+
 let cloned = cloneObject(user);
 
 let person = {
@@ -222,7 +226,7 @@ let person = {
   },
 };
 
-let clonedPerson = cloneObject(user);
+let clonedPerson = cloneObject(person);
 
 console.log(
   `The user object is ${
