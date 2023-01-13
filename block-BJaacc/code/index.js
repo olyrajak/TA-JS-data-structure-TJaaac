@@ -49,16 +49,21 @@ function varTest() {
   }
 ```
 
+
+
     // The main difference between let and var is that scope of a variable defined with let is limited to the block in which it 
     // is declared while variable declared with var has the global scope.  
     ```js
 var variable is the entire enclosing function and it is a global variable
 but let is a block scope local variable
 ```
+
 // 12. Delete the `isAdult` property from the object `students`. Also, print the object before or after deleting the property
 console.log(students);
 delete students.isAdult;
 console.log(students);
+
 // 13. Update the value of the key batch in the object `students` and print it using `console.log`
 students['batch'] = 17;
+
 console.log(students['batch']);
