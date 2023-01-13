@@ -45,4 +45,5 @@ for (let colour of colours) {
 let lastColor = colors[colors.length - 1];
 // 20. Add a new color `tomato` to the index 45. And check the length of the array. Use `console.log` to print.
 colors[45] = "tomato";
+
 console.log(colors.length);
